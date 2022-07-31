@@ -25,7 +25,7 @@ Be sure to allocate at least 10GB of disk space so that you don't run into issue
 ### Architecture
 ![](/assets/images/devops/AWS/infrastructure-diagram-Lucidchart.png)
 
-### Github Link for the Project Scripts: https://bit.ly/3znLhpp
+### Github Link for the Project Scripts: [https://bit.ly/3znLhpp](https://bit.ly/3znLhpp)
 
 ### How to run the project:
 
