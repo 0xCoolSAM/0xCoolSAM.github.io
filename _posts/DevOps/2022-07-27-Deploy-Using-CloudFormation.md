@@ -25,32 +25,41 @@ Be sure to allocate at least 10GB of disk space so that you don't run into issue
 ### Architecture
 ![](/assets/images/devops/AWS/infrastructure-diagram-Lucidchart.png)
 
-### Github Link for the Project Scripts: [https://bit.ly/3znLhpp](https://bit.ly/3znLhpp)
+## First: S3 Bucket
+#### I Created S3 Bucket and uploaded my project that contains my index.html file to copy it later into my servers.
+ 
+ ![](/assets/images/devops/AWS/S3Bucket.jpg)
+
+
+## "All What's left is to run our script and it will automate everything"
 
 ### How to run the project:
 
-1. Network infrastructure stack Usage:
-
+#### 1. Network infrastructure stack Usage:
 ```shell
 ./create.sh netstackName network.yml network-parameters.json
 ```
+### It's started to create the required resources as it shown below:
+![](/assets/images/devops/AWS/networkstack.jpg)
 
-2. After step 1 has been completed successfully, run the services infrastructure stack Usage:
+
+#### 2. After step 1 has been completed successfully, run the services infrastructure stack Usage:
 
 ```shell
 ./create.sh serverstackName server.yml server-parameters.json
  ```
 
- 3. Updating the network infrastructure stack Usage:
- 
-```shell
-./update.sh netstackName network.yml network-parameters.json
-```
-4. Updating the services infrastructure stack Usage:
+### It's started to create the required resources as it shown below:
 
-```shell
-./update.sh serverstackName server.yml server-parameters.json
-```
+![](/assets/images/devops/AWS/serverstack.jpg)
+
+### Now, They are successfully created
+
+![](/assets/images/devops/AWS/creation.jpg)
+
+### And Now we can access our High-Available WebApp from that domain
+
+![](/assets/images/devops/AWS/DNS.jpg)
 
 # WebApp URL:
 [http://serve-WebAp-1HESZ7MAZT598-158522272.us-east-1.elb.amazonaws.com](http://serve-WebAp-1HESZ7MAZT598-158522272.us-east-1.elb.amazonaws.com)
