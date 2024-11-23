@@ -103,7 +103,7 @@ kubectl describe secret sscsecrets
 Authenticate with Docker Hub:
 
 ```bash
-docker login -u mohamedhesham94 -p dodoo_12FK
+docker login
 ```
 
 ### **Pull the SSC Image**
@@ -119,8 +119,8 @@ Create a Kubernetes secret:
 ```bash
 kubectl create secret docker-registry regcred \
   --docker-server=https://index.docker.io/v1/ \
-  --docker-username=mohamedhesham94 \
-  --docker-password=dodoo_12FK
+  --docker-username= \
+  --docker-password=
 ```
 
 ---
