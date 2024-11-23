@@ -4,6 +4,8 @@ main:
     url: /categories/#penetration-testing
   - title: "DevOps"
     url: /categories/#devops
+  - title: "DevSecOps"
+    url: /categories/#devsecops
   - title: "All Categories"
     url: /categories
   # - title: "Sample Posts"
