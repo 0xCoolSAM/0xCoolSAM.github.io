@@ -21,7 +21,7 @@ title                    : "0x70ssAM"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Hossam Ibraheem"
-description              : "Penetration Testing & DevOps"
+description              : "DevSecOps Engineer"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -105,7 +105,7 @@ analytics:
 author:
   name             : "Hossam Ibraheem"
   avatar           : /assets/images/site_data/avatar.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Penetration Testing & DevOps"
+  bio              : "DevSecOps Engineer"
   location         : "127.0.0.1"
   email            :
   links:
