@@ -2,7 +2,7 @@
 title: "Deploying Fortify SSC on Kubernetes Using Helm"
 classes: wide
 header:
-  teaser: /assets/images/devops/Fortify/ssc-helm.jpg
+  teaser: /assets/images/DevSecOps/SSC-Kubernetes/GoJOO.jpg
 ribbon: blue
 description: "Step-by-step guide for deploying Fortify SSC on Kubernetes using Helm."
 categories:
