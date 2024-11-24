@@ -136,6 +136,24 @@ docker exec -it mssql-server /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P '
 
 ## **4. Prepare Fortify SSC Secrets**
 
+### **Create Secrets Directory**
+Navigate to the Helm chart directory and create a `secrets` folder:
+
+```bash
+cd Fortify/helm
+mkdir secrets
+```
+
+### **Add Required Files**
+Place the following files into the `secrets/` directory:
+- `fortify.license`
+- `ssc.autoconfig.yaml`
+- `ssc-kube.crt`
+- `ssc-kube.jks`
+- `ssc-kube-pass`
+
+---
+
 ### **ssc.autoconfig.yaml File**
 Create the **`ssc.autoconfig.yaml`** file as shown below. This file configures SSC database and application settings. Example:
 
