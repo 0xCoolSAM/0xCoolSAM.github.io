@@ -139,7 +139,7 @@ docker exec -it mssql-server /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P '
 ### **ssc.autoconfig.yaml File**
 Create the **`ssc.autoconfig.yaml`** file as shown below. This file configures SSC database and application settings. Example:
 
-![ssc.autoconfig.yaml](/assets/images/DevSecOps/SSC-Kubernetes/ssc-values.png)
+![ssc.autoconfig.yaml](/assets/images/DevSecOps/SSC-Kubernetes/ssc.autoconfig.png)
 
 Ensure the following fields are set correctly:
 - `db.username`: Username for SQL Server (e.g., `sa`)
@@ -174,7 +174,35 @@ kubectl describe secret sscsecrets
 
 ---
 
-## **5. Deploy Fortify SSC 24.4 Using Helm**
+## **5. Pull Fortify SSC Docker Image**
+
+### **Log In to Docker**
+Authenticate with Docker Hub:
+
+```bash
+docker login
+```
+
+### **Pull the SSC Image**
+Download the SSC image:
+
+```bash
+docker pull fortifydocker/ssc-webapp:24.2.0.0186
+```
+
+### **Create Docker Registry Secret**
+Create a Kubernetes secret:
+
+```bash
+kubectl create secret docker-registry regcred \
+  --docker-server=https://index.docker.io/v1/ \
+  --docker-username= \
+  --docker-password=
+```
+
+---
+
+## **6. Deploy Fortify SSC 24.4 Using Helm**
 
 ### **Pull Fortify SSC Docker Image**
 Download the SSC Docker image:
@@ -202,7 +230,7 @@ helm install ssc ssc-1.1.2420000+24.4.0.0000.tgz -f ssc-values-example.yaml
 
 ---
 
-## **6. Verify the Deployment**
+## **7. Verify the Deployment**
 
 ### **Check Kubernetes Resources**
 Ensure SSC is running:
@@ -231,7 +259,7 @@ kubectl logs statefulset.apps/ssc-webapp
 
 ---
 
-## **7. Access Fortify SSC**
+## **8. Access Fortify SSC**
 
 ### **Local Access via Port Forwarding**
 Forward the SSC port locally using VS Code terminal or CLI:
