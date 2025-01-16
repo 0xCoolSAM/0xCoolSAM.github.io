@@ -205,7 +205,7 @@ docker login
 Download the SSC image:
 
 ```bash
-docker pull fortifydocker/ssc-webapp:24.2.0.0186
+docker pull fortifydocker/ssc-webapp:24.4.0.0000
 ```
 
 ### **Create Docker Registry Secret**
