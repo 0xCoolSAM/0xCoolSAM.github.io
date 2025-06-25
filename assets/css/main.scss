@@ -6,3 +6,9 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+// ✅ Custom code block wrapping styles
+pre code {
+  white-space: pre-wrap !important;
+  word-break: break-word;
+}
