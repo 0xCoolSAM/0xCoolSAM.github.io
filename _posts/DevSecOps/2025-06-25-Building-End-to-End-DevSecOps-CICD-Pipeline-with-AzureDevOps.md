@@ -2,8 +2,8 @@
 title: "Building an End-to-End DevSecOps CI/CD Pipeline with Azure DevOps"
 classes: wide
 header:
-  # teaser: /assets/images/DevSecOps/CICD-Pipeline/pipeline-teaser.jpg
-  teaser: https://hackmd.io/_uploads/ByjqS_FExg.jpg
+  teaser: /assets/images/DevSecOps/CICD-Pipeline/pipeline-teaser.jpg
+  # teaser: https://hackmd.io/_uploads/ByjqS_FExg.jpg
 ribbon: green
 description: "A real-world guide to designing and automating a secure CI/CD pipeline in Azure DevOps, integrating SAST, DAST, SCA, secrets scanning, container security, and centralized vulnerability management with DefectDojo."
 categories:
@@ -19,10 +19,10 @@ toc: true
 
 This guide details the creation of a production-grade **DevSecOps CI/CD pipeline** in **Azure DevOps**, developed through the collaboration between Michael and Hossam—hence the ***0xCoolSAM***. The pipeline automates security scanning across source code, dependencies, containers, and runtime environments, with all findings centralized in **DefectDojo** for unified vulnerability management.
 
-<!-- ![Pipeline Overview](/assets/images/DevSecOps/CICD-Pipeline/pipeline-overview.png) -->
+![Pipeline Overview](/assets/images/DevSecOps/CICD-Pipeline/pipeline-overview.jpg)
 
 <!-- ![Pipeline Overview1](https://hackmd.io/_uploads/SkXyOBtEex.jpg) -->
-![Pipeline Overview2](https://hackmd.io/_uploads/SkXfKrYExx.jpg)
+<!-- ![Pipeline Overview2](https://hackmd.io/_uploads/SkXfKrYExx.jpg) -->
 
 ---
 
@@ -66,8 +66,8 @@ The pipeline, defined in an Azure DevOps YAML file, runs on a self-hosted agent 
 5. **DAST**: The application is deployed via Docker Compose, scanned with Fortify SC DAST, and torn down post-scan.
 6. **Vulnerability Aggregation**: A custom Azure DevOps extension uploads all scan results to DefectDojo.
 
-<!-- ![Azure DevOps Pipeline](/assets/images/DevSecOps/CICD-Pipeline/pipeline-view.png) -->
-![Azure DevOps Pipeline](https://hackmd.io/_uploads/BJ045StEgg.jpg)
+![Azure DevOps Pipeline](/assets/images/DevSecOps/CICD-Pipeline/pipeline-view.jpg)
+<!-- ![Azure DevOps Pipeline](https://hackmd.io/_uploads/BJ045StEgg.jpg) -->
 
 ---
 
@@ -88,8 +88,8 @@ Before setting up the pipeline, ensure the following are in place:
   - Fortify SSC and ScanCentral servers.
   - DefectDojo instance (configured via environment variable `DEFECTDOJO_HOST`).
 
-<!-- ![Prerequisites](/assets/images/DevSecOps/CICD-Pipeline/prerequisites.png) -->
-![Prerequisites](https://hackmd.io/_uploads/SkgskiHKNgx.jpg)
+![Prerequisites](/assets/images/DevSecOps/CICD-Pipeline/prerequisites.jpg)
+<!-- ![Prerequisites](https://hackmd.io/_uploads/SkgskiHKNgx.jpg) -->
 
 ---
 
@@ -213,9 +213,10 @@ Builds the Java application using Maven and scans dependencies with Nexus IQ.
         artifact: 'NexusFullScanReport'
 ```
 
-<!-- ![Nexus IQ Report](/assets/images/DevSecOps/CICD-Pipeline/nexus-iq-report.png) -->
-![Nexus IQ Report1](https://hackmd.io/_uploads/S1MFQdFVex.png)
-![Nexus IQ Report2](https://hackmd.io/_uploads/H1OYmOKVll.png)
+![Nexus IQ Report](/assets/images/DevSecOps/CICD-Pipeline/nexus-iq-report1.png)
+![Nexus IQ Report](/assets/images/DevSecOps/CICD-Pipeline/nexus-iq-report2.png)
+<!-- ![Nexus IQ Report1](https://hackmd.io/_uploads/S1MFQdFVex.png)
+![Nexus IQ Report2](https://hackmd.io/_uploads/H1OYmOKVll.png) -->
 
 ---
 
@@ -256,9 +257,10 @@ Performs static code analysis using Fortify ScanCentral SAST.
         artifact: 'FortifyFPRReport'
 ```
 
-<!-- ![Fortify SAST Results](/assets/images/DevSecOps/CICD-Pipeline/fortify-sast-results.png) -->
-![Fortify SAST Results1](https://hackmd.io/_uploads/ByW3muFEle.png)
-![Fortify SAST Results2](https://hackmd.io/_uploads/H1aT7OtEll.png)
+![Fortify SAST Results](/assets/images/DevSecOps/CICD-Pipeline/fortify-sast-results1.png)
+![Fortify SAST Results](/assets/images/DevSecOps/CICD-Pipeline/fortify-sast-results2.png)
+<!-- ![Fortify SAST Results1](https://hackmd.io/_uploads/ByW3muFEle.png)
+![Fortify SAST Results2](https://hackmd.io/_uploads/H1aT7OtEll.png) -->
 
 ---
 
@@ -371,9 +373,10 @@ Deploys the application using Docker Compose and performs dynamic scanning.
         dockerComposeCommand: 'down'
 ```
 
-<!-- ![Fortify DAST Results](/assets/images/DevSecOps/CICD-Pipeline/fortify-dast-results.png) -->
-![Fortify DAST Results1](https://hackmd.io/_uploads/H1uy4utEeg.png)
-![Fortify DAST Results2](https://hackmd.io/_uploads/BkSx4dYEex.png)
+![Fortify DAST Results](/assets/images/DevSecOps/CICD-Pipeline/fortify-dast-results1.png)
+![Fortify DAST Results](/assets/images/DevSecOps/CICD-Pipeline/fortify-dast-results2.png)
+<!-- ![Fortify DAST Results1](https://hackmd.io/_uploads/H1uy4utEeg.png)
+![Fortify DAST Results2](https://hackmd.io/_uploads/BkSx4dYEex.png) -->
 
 ---
 
@@ -508,16 +511,17 @@ Monitor the pipeline execution in Azure DevOps:
 az pipelines runs list --project $(AZURE_DEVOPS_PROJECT_NAME)
 ```
 
-<!-- ![Pipeline Status](/assets/images/DevSecOps/CICD-Pipeline/pipeline-status.png) -->
-![Pipeline Status](https://hackmd.io/_uploads/ryMTqHY4lg.png)
+![Pipeline Status](/assets/images/DevSecOps/CICD-Pipeline/pipeline-status.png)
+<!-- ![Pipeline Status](https://hackmd.io/_uploads/ryMTqHY4lg.png) -->
 
 
 ### **View DefectDojo Reports**
 Access the DefectDojo dashboard to review consolidated vulnerabilities
 
-<!-- ![DefectDojo Dashboard](/assets/images/DevSecOps/CICD-Pipeline/defectdojo-dashboard.png) -->
-![DefectDojo Dashboard1](https://hackmd.io/_uploads/BkP-V_Y4lg.png)
-![DefectDojo Dashboard2](https://hackmd.io/_uploads/rJgzEuF4lg.png)
+![DefectDojo Dashboard](/assets/images/DevSecOps/CICD-Pipeline/defectdojo-dashboard1.png)
+![DefectDojo Dashboard](/assets/images/DevSecOps/CICD-Pipeline/defectdojo-dashboard2.png)
+<!-- ![DefectDojo Dashboard1](https://hackmd.io/_uploads/BkP-V_Y4lg.png)
+![DefectDojo Dashboard2](https://hackmd.io/_uploads/rJgzEuF4lg.png) -->
 
 ---
 
