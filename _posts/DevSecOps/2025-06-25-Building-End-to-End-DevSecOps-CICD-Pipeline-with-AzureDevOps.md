@@ -214,6 +214,7 @@ Builds the Java application using Maven and scans dependencies with Nexus IQ.
 ```
 
 ![Nexus IQ Report](/assets/images/DevSecOps/CICD-Pipeline/nexus-iq-report1.png)
+---
 ![Nexus IQ Report](/assets/images/DevSecOps/CICD-Pipeline/nexus-iq-report2.png)
 <!-- ![Nexus IQ Report1](https://hackmd.io/_uploads/S1MFQdFVex.png)
 ![Nexus IQ Report2](https://hackmd.io/_uploads/H1OYmOKVll.png) -->
@@ -258,6 +259,7 @@ Performs static code analysis using Fortify ScanCentral SAST.
 ```
 
 ![Fortify SAST Results](/assets/images/DevSecOps/CICD-Pipeline/fortify-sast-results1.png)
+---
 ![Fortify SAST Results](/assets/images/DevSecOps/CICD-Pipeline/fortify-sast-results2.png)
 <!-- ![Fortify SAST Results1](https://hackmd.io/_uploads/ByW3muFEle.png)
 ![Fortify SAST Results2](https://hackmd.io/_uploads/H1aT7OtEll.png) -->
@@ -374,6 +376,7 @@ Deploys the application using Docker Compose and performs dynamic scanning.
 ```
 
 ![Fortify DAST Results](/assets/images/DevSecOps/CICD-Pipeline/fortify-dast-results1.png)
+---
 ![Fortify DAST Results](/assets/images/DevSecOps/CICD-Pipeline/fortify-dast-results2.png)
 <!-- ![Fortify DAST Results1](https://hackmd.io/_uploads/H1uy4utEeg.png)
 ![Fortify DAST Results2](https://hackmd.io/_uploads/BkSx4dYEex.png) -->
@@ -519,6 +522,7 @@ az pipelines runs list --project $(AZURE_DEVOPS_PROJECT_NAME)
 Access the DefectDojo dashboard to review consolidated vulnerabilities
 
 ![DefectDojo Dashboard](/assets/images/DevSecOps/CICD-Pipeline/defectdojo-dashboard1.png)
+---
 ![DefectDojo Dashboard](/assets/images/DevSecOps/CICD-Pipeline/defectdojo-dashboard2.png)
 <!-- ![DefectDojo Dashboard1](https://hackmd.io/_uploads/BkP-V_Y4lg.png)
 ![DefectDojo Dashboard2](https://hackmd.io/_uploads/rJgzEuF4lg.png) -->
