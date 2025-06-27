@@ -4,8 +4,8 @@ Welcome to **0xCoolSAM**, a GitHub-based publication platform dedicated to shari
 
 This organization and blog are maintained and authored by:
 
-- **Hossam Ibraheem**
-- **Michael Milad**
+- **Hossam Ibraheem** ([GitHub: @0x70ssAM](https://github.com/0x70ssAM))
+- **Michael Milad** ([GitHub: @Co0o0oL](https://github.com/Co0o0oL))
 
 We aim to provide insightful, hands-on articles and technical write-ups focused on:
 - Secure CI/CD Pipelines
